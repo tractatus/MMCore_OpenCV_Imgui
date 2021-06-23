@@ -24,26 +24,57 @@ I still havent completely made the compilation of MMCore entirely into CMake so 
 ### Installation
 
 Step 1-3 follows the compilation advice for MicroManager Java which compiles MMDevice and makes makefile for MMCore.
-After compiling take the entire folder `mmCoreAndDevices` and place in this directory.
+After compiling take the entire folder `mmCoreAndDevices` and place in this directory. See:
+https://github.com/micro-manager/micro-manager/blob/efb524723a90ed1a329b4423c698edfde59d0629/doc/how-to-build.md
 
-1. Download MicroManager [https://example.com](https://example.com)
-2. Clone the repo
+1. Install MicroManager from binary as usual and check that it works with your microscope.
+   Then Clone the MicroManager repo:
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/micro-manager/micro-manager.git
    ```
-3. Compile MicroManager
+2. First check that you have the following dependencies for compiling micromanager:
    ```sh
-   npm install
+   which autoconf
+   which automake
+   which glibtool
+   which pkg-config
+   brew info boost
+   brew info opencv4
    ```
-4. Run CMake on our program
+   If not install with homebrew. Boost is necessary for micromanager, opencv is not but this C++ repo uses OpenCV to process the image.
+3. Generate configure file:
    ```sh
-   const API_KEY = 'ENTER YOUR API';
+   ./autogen.sh
    ```
-5. Run make
+4. Run configure
    ```sh
-   const API_KEY = 'ENTER YOUR API';
+   ./configure
    ```
-5. Enjoy!
+5. Compile
+   ```sh
+   make
+   ```
+6. Move to `mmCoreAndDevices/MMCore` and make sure it is compiled
+   ```sh
+   cd ./mmCoreAndDevices/MMCore
+   make
+   cd ../..
+   ```
+
+7. Clone this repo and copy the `mmCoreAndDevices` directory and replace it:
+   ```sh
+   git clone https://github.com/tractatus/MMCore_OpenCV_Imgui.git
+   cp -r ./mmCoreAndDevices ./MMCore_OpenCV_Imgui/
+   ```
+
+8. Compile:
+   ```sh
+   cd MMCore_OpenCV_Imgui
+   cmake .
+   make
+   ```
+
+9. Run:
    ```sh
    ./micromanager
-   ```
+   ```   
