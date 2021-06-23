@@ -8,7 +8,7 @@
   <h3 align="center">MMCore, OpenCV, Imgui</h3>
 
   <p align="center">
-    A minimal reproducible example using MMCore to handle microscope I/O, OpenCV for image processing and Imgui for GUI.
+    A minimal reproducible example using MMCore to handle microscope I/O, <br>OpenCV for image processing and<br> Imgui for bloat-free GUI with minimal dependencies.
   </p>
 </p>
 
