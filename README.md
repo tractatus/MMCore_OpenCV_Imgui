@@ -9,22 +9,21 @@
 
   <p align="center">
     A minimal reproducible example using MMCore to handle microscope I/O, OpenCV for image processing and Imgui for GUI.
-
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">About the project</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Installation</a>
   </p>
 </p>
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+### About The Project
 
-[![screen shot][screenshot]](https://example.com)
+[![screen shot][screenshot]](https://github.com/tractatus/MMCore_OpenCV_Imgui/blob/main/mmcore_opencv_imgui.gif)
 
+I still havent completely made the compilation of MMCore entirely into CMake so just download the orignal micromanager source code and compile it through their `automake` instructions.
 
 ### Installation
+
+Step 1-3 follows the compilation advice for MicroManager Java which compiles MMDevice and makes makefile for MMCore.
+After compiling take the entire folder `mmCoreAndDevices` and place in this directory.
 
 1. Download MicroManager [https://example.com](https://example.com)
 2. Clone the repo
