@@ -16,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ### About The Project
 
-<img src="https://github.com/tractatus/MMCore_OpenCV_Imgui/blob/main/mmcore_opencv_imgui.gif" width="250"/>
+<img src="https://github.com/tractatus/MMCore_OpenCV_Imgui/blob/main/mmcore_opencv_imgui.gif" width="800"/>
 
 
 I still havent completely made the compilation of MMCore entirely into CMake so just download the orignal micromanager source code and compile it through their `automake` instructions.
